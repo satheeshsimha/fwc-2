@@ -20,9 +20,9 @@ import shlex
 I = np.array(([1,0],[0,1]))
 #Given points for the circle
 Q = np.array(([0,0]))  # External Point
-c = np.array(([25,0])) # Centre
+O = np.array(([25,0])) # Centre
 r = 7  #Radius of the circle
-u = -c
+u = -O
 f = 576
 
 sigma = (np.outer(Q+u, Q+u) - (LA.norm(Q)**2 + 2*u.T@Q+f)*I )
@@ -46,7 +46,7 @@ R12 = r*(n2/LA.norm(n2)) - u
 R22 = -r*(n2/LA.norm(n2)) - u
 
 ##Generating the circle
-x_circ= circ_gen(c,r)
+x_circ= circ_gen(O,r)
 
 #Generating lines
 x_cR21 = line_gen(Q, R21)
@@ -59,11 +59,11 @@ plt.plot(x_cR22[0,:],x_cR22[1,:],label='$Tangent_2$')
 
 
 #Labeling the coordinates
-plot_coords = np.vstack((c,Q,R22,R21)).T
-vert_labels = ['c','Q','$R_1$','$R_2$']
+plot_coords = np.vstack((O,Q,R22,R21)).T
+vert_labels = ['O','Q','$R_1$','$R_2$']
 for i, txt in enumerate(vert_labels):
     if ( i == 0) :
-      label = "{}".format('$c - Center$' )
+      label = "{}".format('$O - Center$' )
     elif ( i == 3) :
       label = "{} {}".format('$R_2 - Tangent$', '$Point 2$' )
     elif ( i == 2) :

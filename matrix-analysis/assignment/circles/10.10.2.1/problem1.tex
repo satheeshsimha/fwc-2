@@ -47,13 +47,13 @@ This is Problem-1 from Exercise 10.2
 \begin{enumerate}
 \item From a point $\vec{Q}$, the length of the tangent to a circle is $24 cm$ and the distance of $\vec{Q}$ from the centre is $25 cm$. Find the radius of the circle. Draw the circle and the tangents. \\ 
 \solution 
-Let $\vec{Q}$ be $\vec{Q}\myvec{0 \\ 0}$. Let $\vec{c}$ be the centre of the circle. Let $\vec{R}_1 \text{ and } \vec{R}_2$ be the two points on the circle such that $\vec{R_1Q} \text{ and } \vec{R_2Q}$ are tangents to the circle from the point $\vec{Q}$. Given that,  
+Let $\vec{Q}$ be $\vec{Q}\myvec{0 \\ 0}$. Let $\vec{O}$ be the centre of the circle. Let $\vec{R}_1 \text{ and } \vec{R}_2$ be the two points on the circle such that $R_1Q$ and $R_2Q$ are tangents to the circle from the point $\vec{Q}$. Given that,  
 \begin{align}
-	\norm{\vec{cQ}} &= 25, \norm{\vec{R_1Q}} = \norm{\vec{R_2Q}} = 24 \\ 
-	\therefore \vec{c} &= \vec{c}\myvec{25 \\ 0} \\
-	r &= \norm{\vec{cR_1}} = \sqrt{\norm{\vec{cQ}}^2 - \norm{\vec{R_1Q}^2}}  \\
+	OQ &= 25, R_1Q = R_2Q = 24 \\ 
+	\therefore \vec{O} &= \vec{O}\myvec{25 \\ 0} \\
+	r &= OR_1 = \sqrt{OQ^2 - R_1Q^2}  \\
 	&= \sqrt{25^2 - 24^2} \\
-	&= 7
+	&= 7cm
 \end{align}
 We have to find points $\vec{R}_1 \text{ and } \vec{R}_2$. \\
 We know that the equation to the circle is given as
@@ -63,9 +63,9 @@ We know that the equation to the circle is given as
 \end{align}
 where
 \begin{align}
-	\vec{u} &= -\vec{c}  = -\myvec{25 \\ 0}\text{ and } \\
+	\vec{u} &= -\vec{O}  = -\myvec{25 \\ 0}\text{ and } \\
         \label{eq:fRelation}
-	f &= \norm{\vec{c}}^2 - r^2 = 576
+	f &= \norm{\vec{O}}^2 - r^2 = 576
 \end{align}
 \begin{align}
 	\vec{\Sigma} &= \brak{\vec{Q}+\vec{u}}\brak{\vec{Q}+\vec{u}}^\top - \brak{\norm{\vec{Q}}^2+2\vec{u}^\top\vec{Q}+f}\vec{I}
