@@ -17,7 +17,8 @@
   breaklines=true
 }
 \usepackage{hyperref}
-  
+\usepackage{mathtools}
+
 %Following 2 lines were added to remove the blank page at the beginning
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
@@ -71,7 +72,10 @@ where
 	\vec{\Sigma} &= \brak{\vec{Q}+\vec{u}}\brak{\vec{Q}+\vec{u}}^\top - \brak{\norm{\vec{Q}}^2+2\vec{u}^\top\vec{Q}+f}\vec{I}
 \end{align}
 \begin{align}
-	&= \brak{\myvec{0\\0}-\myvec{25\\0}}\brak{\myvec{0\\0}-\myvec{25\\0}}^\top - \brak{0-2\myvec{25&0}\myvec{0 \\0}+576}\vec{I} \\ 
+  \begin{split}
+	={}& \brak{\myvec{0\\0}-\myvec{25\\0}}\brak{\myvec{0\\0}-\myvec{25\\0}}^\top \\
+	   & -\brak{0-2\myvec{25&0}\myvec{0 \\0}+576}\vec{I}\\ 
+  \end{split}\\
 	&= \myvec{-25\\0}\myvec{-25&0} - \brak{576}\vec{I} \\ 
 	&= \myvec{625&0\\0&0 } - \myvec{576&0\\0&576} \\ 
         \label{eq:Eq1}
@@ -100,8 +104,8 @@ The points of contact of a tangent on a circle from an external point is given b
 	&= \brak{\pm \frac{7}{25}\myvec{7 \\ -24}+ \myvec{25 \\ 0}} \\
 	&= \brak{\pm \myvec{\frac{49}{25} \\ \\[1pt] \frac{-168}{25}} + \myvec{25 \\ 0}} \\
 	&= \myvec{\frac{674}{25} \\ \\[1pt] \frac{-168}{25}}, \myvec{\frac{576}{25} \\ \\[1pt] \frac{168}{25}}  \\
-	\therefore \vec{R}_1 &= \vec{q{22}} = \myvec{\frac{576}{25} \\ \\[1pt] \frac{168}{25}} \\
-	\vec{R}_2 &= \vec{q{12}} = \myvec{\frac{576}{25} \\ \\[1pt] -\frac{168}{25}}
+	\therefore \vec{R}_1 &= \vec{q_{22}} = \myvec{\frac{576}{25} \\ \\[1pt] \frac{168}{25}} \\
+	\vec{R}_2 &= \vec{q_{12}} = \myvec{\frac{576}{25} \\ \\[1pt] -\frac{168}{25}}
 \end{align}
 The figure is as shown in \ref{fig:Fig1}
 \begin{figure}[!h]
