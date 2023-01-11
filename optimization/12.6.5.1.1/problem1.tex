@@ -62,41 +62,31 @@ For a generic quadratic function $ax^2+bc+c$, let us determine the sufficient co
 	f\brak{x} &= ax^2+bx+c 
 \end{align}
 Substituting LHS of inequality from \eqref{eq:convex_def} in \eqref{eq:Eq1}
-\begin{align}
-	f\sbrak{\lambda x_1 + \brak{1-\lambda}x_2}  &= f\sbrak{x_2 + \lambda \brak{x_1-x_2}}\\ 
-   \begin{split}
-	   = {}& a\sbrak{x_2+\lambda\brak{x_1-x_2}}^2 \\ 
-	     & + b\sbrak{x_2+\lambda\brak{x_1-x_2}} + c 
-   \end{split} \\ 
+\begin{multline}
    \label{eq:Eq2}
-   \begin{split}
-	   ={}& ax_2^2 + a\lambda^2 x_1^2+a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 \\
-	    & +2a\lambda x_1x_2 - 2a\lambda x_2^2+bx_2+b\lambda x_1-b\lambda x_2+c 
-   \end{split} 
-\end{align}
+	f\sbrak{\lambda x_1 + \brak{1-\lambda}x_2}  = f\sbrak{x_2 + \lambda \brak{x_1-x_2}}\\ 
+	   =  a\sbrak{x_2+\lambda\brak{x_1-x_2}}^2 b\sbrak{x_2+\lambda\brak{x_1-x_2}} + c \\ 
+	   = ax_2^2 + a\lambda^2 x_1^2+a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 \\ 
+	   +2a\lambda x_1x_2 - 2a\lambda x_2^2+bx_2+b\lambda x_1-b\lambda x_2+c 
+\end{multline} 
 Substituting RHS of inequality from \eqref{eq:convex_def} in \eqref{eq:Eq1}
-\begin{align}
-	\begin{split}
-	\lambda f\brak{x_1} + \brak{1-\lambda}f\brak{x_2}  &= a \lambda x_1^2 + b\lambda x_1 + \lambda c \\ 
-		& + \brak{1-\lambda}\brak{ax_2^2+bx_2+c} \\
-	\end{split} \\
+\begin{multline}
+	\lambda f\brak{x_1} + \brak{1-\lambda}f\brak{x_2}  = a \lambda x_1^2 + b\lambda x_1 + \lambda c \\ 
+		 + \brak{1-\lambda}\brak{ax_2^2+bx_2+c} \\
 	\label{eq:Eq3}
-		&= a \lambda x_1^2 + b\lambda x_1 + ax_2^2 + bx_2 + c -a\lambda x_2^2 -b\lambda x_2
-\end{align}
+		= a \lambda x_1^2 + b\lambda x_1 + ax_2^2 + bx_2 + c -a\lambda x_2^2 -b\lambda x_2
+\end{multline} 
 Combining \eqref{eq:Eq2} and \eqref{eq:Eq3} with ineqiality and simplifying
 \begin{align}
-	\begin{split}
-	    a\lambda^2 x_1^2 + a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 +2a\lambda x_1x_2 - 2a\lambda x_2^2 \\ 
-	   \leq a\lambda x_1^2  -a\lambda x_2^2 \\ 
-	\end{split} 
-\end{align}
-\begin{align}
-	&a\lambda^2 x_1^2 + a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 +2a\lambda x_1x_2 - a\lambda x_2^2 - a\lambda x_1^2 \leq 0 \\ 
-	  &= x_1^2\brak{a\lambda^2-a\lambda} + x_2^2\brak{a\lambda^2 - a\lambda} - 2x_1x_2\brak{a\lambda^2-a\lambda} \leq 0 \\ 
-	  &= \brak{a \lambda^2-a\lambda}\brak{x_1-x_2}^2 \leq 0\\
-	 \label{eq:Eq4}
-	  &= a\lambda\brak{1-\lambda}\brak{x_1-x_2}^2 \geq 0
-\end{align}
+a\lambda^2 x_1^2 + a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 +2a\lambda x_1x_2 - 2a\lambda x_2^2 \leq a\lambda x_1^2  -a\lambda x_2^2  
+\end{align} 
+\begin{multline}
+	\label{eq:Eq4}
+	a\lambda^2 x_1^2 + a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 +2a\lambda x_1x_2 - a\lambda x_2^2 - a\lambda x_1^2 \leq 0 \\ 
+	   x_1^2\brak{a\lambda^2-a\lambda} + x_2^2\brak{a\lambda^2 - a\lambda} - 2x_1x_2\brak{a\lambda^2-a\lambda} \leq 0 \\ 
+	   \brak{a \lambda^2-a\lambda}\brak{x_1-x_2}^2 \leq 0\\
+	   a\lambda\brak{1-\lambda}\brak{x_1-x_2}^2 \geq 0
+\end{multline}
 For the ineqality in \eqref{eq:Eq4} to be true,
 \begin{align}
 	a \geq 0 \because \lambda, 1-\lambda \geq 0, \brak{x_1-x_2}^2 \geq 0
@@ -115,7 +105,7 @@ Hence, the function in equation \eqref{eq:Eq5} is convex.
 The figure is as shown in Fig\ref{fig:Fig1}
 \begin{figure}[!h]
 	\begin{center}
-		\includegraphics[width=\columnwidth]{./figs/problem1.pdf}
+		\includegraphics[width=\columnwidth]{figs/problem1.pdf}
 	\end{center}
 \caption{}
 \label{fig:Fig1}

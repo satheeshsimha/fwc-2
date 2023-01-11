@@ -24,9 +24,6 @@ plt.plot(x,f,color=(1,0,1), label = '$f(x)= (2x-1)^2 + 3$')
 plt.grid()
 plt.xlabel('$x-Axis$')
 plt.ylabel('$y-Axis$')
-
-#plt.gca().legend(loc='best', prop={'size':6})
-plt.grid() # minor
 plt.axis('equal')
 plt.title('Convexity')
 
