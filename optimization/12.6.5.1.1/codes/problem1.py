@@ -24,7 +24,6 @@ plt.plot(x,f,color=(1,0,1), label = '$f(x)= (2x-1)^2 + 3$')
 plt.grid()
 plt.xlabel('$x-Axis$')
 plt.ylabel('$y-Axis$')
-plt.axis('equal')
 plt.title('Convexity')
 
 #Convexity/Concavity
@@ -47,7 +46,8 @@ plt.plot([b,b],[0,f_b],color=(0,1,0),marker='o',label="$f(b)$")
 plt.plot([c,c],[0,f_c],color=(0,0,1),marker='o',label="$f(\lambda a + (1-\lambda)b)$")
 plt.plot([c,c],[0,f_c_hat],color=(1/2,2/3,3/4),marker='o',label="$\lambda f(a) + (1-\lambda)f(b)$")
 plt.plot([a,b],[f_a,f_b],color=(0,1,1))
-plt.legend(loc=2)
+#plt.legend(loc='best')
+plt.gca().legend(loc='lower left', prop={'size':7},bbox_to_anchor=(0.85,0.4))
 #subprocess.run(shlex.split("termux-open ../figs/1.1.pdf"))
 #if using termux
 plt.savefig('../figs/problem1.pdf')
