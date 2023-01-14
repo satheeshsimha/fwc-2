@@ -30,23 +30,30 @@ prob = cp.Problem(obj, constraint)
 prob.solve()
 print("optimal value:", cost_func.value)
 print("optimal var:", x.value.T)
-
 #Drawing lines
 x1 = np.linspace(0,5,400)#points on the x axis
 y1 = (4-x1)/4
 y2 = np.zeros(len(x1))
 
+
 plt.plot(x1,y1,label = '$x+4y=4$')
 plt.plot(x1,y2,label = '$y=0$')
 plt.plot(y2,x1,label = '$x=0$')
+
 plt.grid()
 plt.xlabel('$x-Axis$')
 plt.ylabel('$y-Axis$')
 plt.title('Linear Programming')
 plt.ylim(-0.5,1.5)
-
 txt = "{} {}".format("Optimum ", "Point") 
 plt.plot(x.value[0],x.value[1],color=(1,0,1),marker='o',label= txt)
+#Filling the feasible region
+fill_cords = np.array(([0,0],[0,1],x.value.T.ravel()))
+txt = "{} {}".format("Feasible ", "Region") 
+plt.fill("j", "k", 'plum',label = txt,
+         data={"j": fill_cords[:,0],
+               "k": fill_cords[:,1]})  
+
 plt.legend(loc='best')
 #if using termux
 plt.savefig('../figs/problem1.pdf')
