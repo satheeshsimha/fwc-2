@@ -44,6 +44,8 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 %\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\def\fnum@table{\tablename~\thetable}
+\def\fnum@figure{\figurename~\thefigure}
 
 \begin{document}
 
@@ -92,7 +94,8 @@ Substituting above values of corner points in Equation \eqref{eq:Obj_func} to ge
 \begin{table}[!h]
 	\centering
 	\input{tables/det.tex} 
-	\caption{\label{tab:widgets}}
+	\caption{}
+	\label{tab:widgets}
 \end{table}
 
 From the table \ref{tab:widgets}, it is clear that the optimum value and optimum point are similar to what we found in \eqref{eq:maxval}. 
@@ -102,7 +105,8 @@ The relevant figure is as shown in \ref{fig:inequality}
 	\begin{center}
 		\includegraphics[width=\columnwidth]{figs/problem1.pdf}
 	\end{center}
-	\caption{\label{fig:inequality}}
+	\caption{}
+	\label{fig:inequality}
 \end{figure}
 \end{enumerate}
 \end{document}
