@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  14 JAN 2023 20:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  17 JAN 2023 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -163,6 +163,9 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/extarrows/extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip51
@@ -220,10 +223,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/extarrows/extarrows.sty
-Package: extarrows 2008/05/15 v1.0b Some extensible arrows
-)
+))
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
 
@@ -381,44 +381,95 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen184
 \l_MT_below_shortintertext_sep=\dimen185
 )
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2018/08/11 v1.3c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip59
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count284
+\LTcapwidth=\dimen186
+\LT@head=\box51
+\LT@firsthead=\box52
+\LT@foot=\box53
+\LT@lastfoot=\box54
+\LT@cols=\count285
+\LT@rows=\count286
+\c@LT@tables=\count287
+\c@LT@chunks=\count288
+\LT@p@ftn=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count289
+\multirow@dima=\skip65
+\bigstrutjot=\dimen187
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count284
-\l__pdf_internal_box=\box51
+\l__kernel_color_stack_int=\count290
+\l__pdf_internal_box=\box55
 )
 (./problem1.aux)
 \openout1 = `problem1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
-\scratchdimen=\dimen186
-\scratchbox=\box52
-\nofMPsegments=\count286
-\nofMParguments=\count287
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count288
-\MPscratchDim=\dimen187
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count291
+\scratchdimen=\dimen188
+\scratchbox=\box56
+\nofMPsegments=\count292
+\nofMParguments=\count293
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count294
+\MPscratchDim=\dimen189
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
+\everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -428,12 +479,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count291
+\c@lstlisting=\count297
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 38.
+\AtBeginShipoutBox=\box57
+Package hyperref Info: Link coloring OFF on input line 48.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -444,24 +500,24 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count292
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
 
 (./problem1.out) (./problem1.out)
 \@outlinefile=\write3
 \openout3 = `problem1.out'.
 
 Package atbegshi Info: Shipout page discarded.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -472,53 +528,75 @@ LaTeX Warning: No \author given.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `math shift' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 47.
+(hyperref)                removing `superscript' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `math shift' on input line 57.
 
-<figs/problem1.pdf, id=9, 462.52798pt x 346.89601pt>
-File: figs/problem1.pdf Graphic file (type pdf)
-<use figs/problem1.pdf>
-Package pdftex.def Info: figs/problem1.pdf  used on input line 75.
-(pdftex.def)             Requested size: 390.0pt x 292.51282pt.
+(./tables/det.tex
+\gnumericTableWidth=\skip66
+\gnumericTableWidthComplete=\skip67
+\gnumericMultiRowLength=\skip68
+\gnumericColA=\skip69
+\gnumericColB=\skip70
+
+Overfull \hbox (1.63753pt too wide) in paragraph at lines 189--189
+ \OT1/cmr/bx/n/12 Cor-re-spond-ing 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 210
+ []
+
+)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figs/problem1.pdf>
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
+<figs/problem1.pdf, id=13, 462.52798pt x 346.89601pt>
+File: figs/problem1.pdf Graphic file (type pdf)
+<use figs/problem1.pdf>
+Package pdftex.def Info: figs/problem1.pdf  used on input line 103.
+(pdftex.def)             Requested size: 469.75502pt x 352.33656pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Text page 2 contains only floats.
+
+[2 <./figs/problem1.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./problem1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `problem1.out' has not changed.
 (rerunfilecheck)             Checksum: 06CBB871CF9E4E1A7F66C066648EDEA3;58.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 10031 strings out of 481239
- 151807 string characters out of 5920376
- 426815 words of memory out of 5000000
- 25122 multiletter control sequences out of 15000+600000
+ 10381 strings out of 481239
+ 156982 string characters out of 5920376
+ 438322 words of memory out of 5000000
+ 25434 multiletter control sequences out of 15000+600000
  542969 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,42p,254b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,15n,42p,226b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on problem1.pdf (2 pages, 74594 bytes).
+Output written on problem1.pdf (2 pages, 78200 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
  14 words of extra memory for PDF output out of 10000 (max. 10000000)
 

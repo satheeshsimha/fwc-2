@@ -1,15 +1,12 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage[none]{hyphenat}
-\usepackage{graphicx}
 \usepackage{listings}
 \usepackage[english]{babel}
-\usepackage{graphicx}
 \usepackage{caption} 
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{amssymb} % for \because
-\usepackage{amsmath}   % for having text in math mode
 \usepackage{extarrows} % for Row operations arrows
 \usepackage{listings}
 \lstset{
@@ -18,11 +15,21 @@
 }
 \usepackage{hyperref}
 \usepackage{mathtools}
-
 %Following 2 lines were added to remove the blank page at the beginning
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
+%for Tables
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
 
 %New macro definitions
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
@@ -34,6 +41,9 @@
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \let\vec\mathbf
 
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
 \begin{document}
 
@@ -49,6 +59,7 @@ This is Problem-1 from Exercise 12.1
 \begin{enumerate}
 \item Maximize
 \begin{align}
+	\label{eq:Obj_func}
 	Z = 3x + 4y
 \end{align}
 subject to the constraints:
@@ -57,7 +68,8 @@ subject to the constraints:
 	x \geq 0, y \geq 0
 \end{align}
 \solution 
-The given problem can be formulated as 
+\begin{enumerate}
+\item Using cvxpy method: The given problem can be formulated as 
 \begin{align}
 	\max_{\vec{x}} Z &= \myvec{3 & 4}\vec{x} \\
         \myvec{1 & 4\\
@@ -66,16 +78,31 @@ The given problem can be formulated as
 \end{align}
 Solving using cvxpy, we get
 \begin{align}
-	\max_{\vec{x}} Z &= 12 \\
-	\vec{x} &= \myvec{4  \\  0} 
+	\label{eq:maxval}
+	\max_{\vec{x}} Z &= 12 , 
+	\vec{x} = \myvec{4  \\  0} 
 \end{align}
-The figure is as shown in Fig\ref{fig:Fig1}
+\item Using Corner point method: The corner points of  the inequalities are:
+\begin{align}
+	\vec{A} = \myvec{0 \\ 1}\\
+	\vec{B} = \myvec{0 \\ 0} \\
+	\vec{x} = \myvec{4 \\ 0} 
+\end{align}
+Substituting above values of corner points in Equation \eqref{eq:Obj_func} to get the value of $Z$, as shown in the Table \ref{tab:widgets}
+\begin{table}[!h]
+	\centering
+	\input{tables/det.tex} 
+	\caption{\label{tab:widgets}}
+\end{table}
+
+From the table \ref{tab:widgets}, it is clear that the optimum value and optimum point are similar to what we found in \eqref{eq:maxval}. 
+\end{enumerate}
+The relevant figure is as shown in \ref{fig:inequality}
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{figs/problem1.pdf}
 	\end{center}
-\caption{}
-\label{fig:Fig1}
+	\caption{\label{fig:inequality}}
 \end{figure}
 \end{enumerate}
 \end{document}
