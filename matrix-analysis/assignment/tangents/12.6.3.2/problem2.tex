@@ -21,6 +21,7 @@
 %Following 2 lines were added to remove the blank page at the beginning
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+\usepackage{gensymb}
 
 
 %New macro definitions
@@ -47,7 +48,8 @@ This is Problem-2 from Exercise 6.3
 \begin{enumerate}
 \item Find the slope of the tangent to the curve $y = \frac{x-1}{x-2}$, $x \neq 2$ at $x=10$.
 \solution 
-The given equation of the curve can be rearranged as
+\begin{enumerate}
+\item The given equation of the curve can be rearranged as
 \begin{align}
 	xy-x-2y+1 &= 0 \\
         \label{eq:Eq1}
@@ -64,23 +66,37 @@ Comparing coefficients of both equations \eqref{eq:Eq1} and \eqref{eq:Eq2}
 	\vec{u} &= -\myvec{\frac{1}{2} \\ 1} \\
 	f &= 1 
 \end{align}
-Given the point of contact $\vec{q}$, the equation of a tangent to \eqref{eq:Eq2} is
+Given the point of contact $\vec{q}$, the normal vector of the tangent to \eqref{eq:Eq2} is
 \begin{align}
 	\label{eq:Eq3}
-	\brak{\vec{V}\vec{q} + \vec{u}}^\top \vec{x} + \vec{u}^\top\vec{q} + f = 0
+        \kappa \vec{n} = \vec{V}\vec{q}+\vec{u}, \kappa \in \mathbb{R}
 \end{align}
-		For the given point of contact with $\vec{q}_x=10$,
+For the given point of contact with $\vec{q}_1=10$,
 \begin{align}
-	\vec{q}_y = \frac{10-1}{10-2} = \frac{9}{8} \\
+	\vec{q}_2 = \frac{10-1}{10-2} = \frac{9}{8} \\
 	 \therefore \vec{q} = \myvec{10 \\ \frac{9}{8}}
 \end{align}
 \begin{align}
-	& \eqref{eq:Eq3} \implies \brak{\myvec{ 0 & \frac{1}{2} \\ \frac{1}{2} & 0}\myvec{10\\\frac{9}{8}} - \myvec{\frac{1}{2} \\ 1}}^\top \vec{x} - \myvec{\frac{1}{2} & 1}\myvec{10 \\\frac{9}{8}} + 1 = 0  \\
-	& \implies \brak{\myvec{ \frac{9}{16} \\ 5} - \myvec{\frac{1}{2} \\ 1}}^\top \vec{x} - \frac{41}{8} = 0 \\
-	& \implies \myvec{\frac{1}{16} & 4}\vec{x} - \frac{41}{8} = 0 \\
-	& \implies \vec{n} = \myvec{1 \\ 64}\\
-	& \implies \vec{m} = \myvec{1 \\ \frac{-1}{64}}
+	& \eqref{eq:Eq3} \implies  \kappa \vec{n} = \myvec{ 0 & \frac{1}{2} \\ \frac{1}{2} & 0} \myvec{10 \\ \frac{9}{8}}-\myvec{\frac{1}{2} \\ 1} \\  
+	&= \brak{\myvec{ \frac{9}{16} \\ 5} - \myvec{\frac{1}{2} \\ 1}} \\
+	\therefore \vec{n} &= \alpha\myvec{1 \\ 64}\\
+	\vec{m} &= \alpha\myvec{1 \\ \frac{-1}{64}}
 \end{align}
+\item Now, we have to determine the nature of the conic. The matrix($\vec{A}$) of the quadratic equation is represented as
+\begin{align}
+         \vec{A} &= \myvec{\vec{V} & \vec{u} \\ \vec{u}^\top & f} \\
+	 &= \myvec{0 & \frac{1}{2} & -\frac{1}{2} \\ 
+	           \frac{1}{2} & 0 & -1   \\
+		   -\frac{1}{2} & -1 & 1}  \\
+	\mydet{A} &=  \frac{1}{4} \\ 
+	\mydet{A_{33}} &= -\frac{1}{4} 
+\end{align}
+$\because$ $\mydet{A} \neq 0$ and $\mydet{A_{33}} < 0$, the conic is a hyperbola. Moreover, the Eigen vectors for $\vec{V}$, which are given as below, indicate that the axes of hyperbola are rotated by $45\degree$. 
+\begin{align}
+	\myvec{\vec{p}_1 & \vec{p}_2} &= \myvec{1 & 1 \\ 1 & -1}
+\end{align}
+To summarize, the conic is a $45\degree$ rotated hyperbola.
+\end{enumerate}
 The relevant diagram is shown in Figure \ref{fig:Fig1}
 \begin{figure}[!h]
 	\begin{center}

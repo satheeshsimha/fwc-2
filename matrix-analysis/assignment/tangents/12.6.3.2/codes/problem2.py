@@ -60,7 +60,7 @@ plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best', fontsize = 'small')
 plt.grid() # minor
-plt.title('Tangent')
+plt.title('Tangent to a Hyperbola')
 #if using termux
 plt.savefig('../figs/problem2.pdf')
 plt.show()
