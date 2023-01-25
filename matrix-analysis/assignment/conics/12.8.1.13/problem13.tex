@@ -27,6 +27,7 @@
 %New macro definitions
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
@@ -73,7 +74,7 @@ For the given line $y=3$, the parameters are
 To calculate the point of contact of line with the conic, we use
 \begin{align}
 	\label{eq:Eq3}
-	2\mu\vec{m}^\top\brak{\vec{V}\vec{h}+\vec{u}}+g\brak{\vec{h}}= 0 
+	\mu^2\vec{m}^\top\vec{V}\vec{m}+2\mu\vec{m}^\top\brak{\vec{V}\vec{h}+\vec{u}}+g\brak{\vec{h}}= 0 
 \end{align}
 \begin{multline}
 	g\brak{\vec{h}}=\myvec{0 & 3}\myvec{0 & 0 \\ 0 & 1}\myvec{0 \\3} \\
@@ -82,8 +83,9 @@ To calculate the point of contact of line with the conic, we use
 	 \implies g\brak{\vec{h}} = 9 
 \end{multline}
 \begin{multline}
-	\eqref{eq:Eq3} \implies 2\mu\myvec{1 & 0}\brak{\myvec{0 & 0 \\ 0 & 1}\myvec{0 \\3}+\myvec{-2 \\ 0}} + 9 = 0 \\
-	\implies 2\mu\myvec{1 & 0}\myvec{-2 \\3} + 9 = 0 \\
+	\eqref{eq:Eq3} \implies \mu^2\myvec{1 & 0}\myvec{0 & 0 \\ 0 & 1}\myvec{1 \\ 0} \\
+	 + 2\mu\myvec{1 & 0}\brak{\myvec{0 & 0 \\ 0 & 1}\myvec{0 \\3}+\myvec{-2 \\ 0}} + 9 = 0 \\
+	\implies \mu^2\brak{0}+2\mu\myvec{1 & 0}\myvec{-2 \\3} + 9 = 0 \\
 	\implies -4\mu + 9 = 0  \\
 	\implies \mu  = \frac{9}{4} 
 \end{multline}
@@ -93,8 +95,9 @@ The point of contact is given as
 \end{align}
 The desired area of the region is given as
 \begin{align}
-	\int_{0}^{3} \ \frac{y^2}{4} \,dx
-	= \frac{9}{4} \text{ sq.units}
+	\int_{0}^{3} \ \frac{y^2}{4} \,dx &= \frac{1}{12}\sbrak{y^3}_{0}^{3} \\
+	&= \frac{1}{12}\brak{27-0} \\
+	&= \frac{9}{4} \text{ sq.units}
 \end{align}
 The relevant diagram is shown in Figure \ref{fig:Fig1}
 \begin{figure}[!h]
