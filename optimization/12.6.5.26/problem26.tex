@@ -58,12 +58,12 @@ Let $r,h,l$ be the radius, height and slant height of the right circular cone re
 	\label{eq:EqV}
 	V &= \frac{1}{3}\pi r^2h 
 \end{align}
-The given problem can be formulated as 
+Surface area $S$ is given as 75.42857 sq.units. The given problem can be formulated as 
 \begin{align}
 	\label{eq:EqMax}
-	\max_{r,h} V &= \frac{1}{3}\pi r^2h \\
+	& V = \max_{r,h} \frac{1}{3}\pi r^2h \\
 	\label{eq:EqConstr}
-	\text { with constraints } S <= 75.42857 
+	&\text { s.t } \pi r\brak{\sqrt{r^2+h^2}} + \pi r^2 \leq 75.42857 
 \end{align}
 \begin{enumerate}
 \item Theoritical proof:
@@ -121,7 +121,7 @@ Let $\theta$ be the semi-vertical angle in Figure \ref{fig:Fig1}. Then,
 \begin{align}
 	\sin\theta &= \frac{OA}{CA} = \frac{r}{l} \\
 	\sin\theta &= \frac{r}{3r} \\
-	\implies \theta = sin^{-1}\frac{1}{3}
+	\implies \theta = \sin^{-1}\frac{1}{3}
 \end{align}
 \item Using Disciplined Geometric Programming (DGP) of cvxpy: Refer to equations \eqref{eq:EqMax} and \eqref{eq:EqConstr} for formulation of optimization problem. Solving this problem, yields following results:
 \begin{align}
