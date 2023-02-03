@@ -39,12 +39,16 @@ import shlex
 def f(x) :
     return ( 4/3*x**2 -16*x + 64 ) #Objective function
 
+def f1(x) :
+    return (  (x+8)/(math.sqrt(3)) ) #Objective function
 
+def f2(x) :
+    return ( -math.sqrt(3)*x) #Objective function
 #Plotting 4/3*x**2 -16*x + 64 
-x = np.linspace(4,8,100)#points on the x axis
+x = np.linspace(3,9,100)#points on the x axis
 y=  f(x) #Objective function
-plt.plot(x,y, label = '$f(\lambda)= 4/3\lambda^2 -16\lambda + 64$')
-plt.plot([lamda_n],[f(lamda_n)],marker='o',label='$\lambda_{Min}=6$')
+#plt.plot(x,y, label = '$f(\lambda)= 4/3\lambda^2 -16\lambda + 64$')
+#plt.plot([lamda_n],[f(lamda_n)],marker='o',label='$\lambda_{Min}=6$')
 
 #plotting lines
 O = np.array([0,0])
@@ -55,11 +59,21 @@ B = np.array([4, 12/(math.sqrt(3))])
 x_OP = line_gen(O,P)
 x_AB = line_gen(A,B)
 
-plt.plot(x_OP[0,:],x_OP[1,:],label = "Perpendicular") 
-plt.plot(x_AB[0,:],x_AB[1,:] ,label='$x-\sqrt{3}y+8=0$')
+x1 = np.linspace(-8,8, 400)
+y1 = f1(x1)
 
-plt.axis('equal')
+x2 = np.linspace(-5,0,400)
+y2 = f2(x2)
+
+#plt.plot(x_OP[0,:],x_OP[1,:],label = "Perpendicular") 
+#plt.plot(x_AB[0,:],x_AB[1,:] ,label='$x-\sqrt{3}y+8=0$')
+
+plt.plot(x2,y2,label = "Perpendicular") 
+plt.plot(x1,y1 ,label='$x-\sqrt{3}y+8=0$')
+
+
 plt.grid()
+plt.axis('equal')
 plt.xlabel('$x-Axis$')
 plt.ylabel('$y-Axis$')
 plt.title('Minimum Value of Function')
