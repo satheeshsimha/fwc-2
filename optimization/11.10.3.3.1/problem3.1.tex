@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amssymb} % for \because
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{extarrows} % for Row operations arrows
+\usepackage{listings}
+\lstset{
+  frame=single,
+  breaklines=true
+}
+\usepackage{hyperref}
+  
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+\usepackage{gensymb}
+
+
+%New macro definitions
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+
+\begin{document}
+
+\begin{center}
+\title{\textbf{Convex Optimization}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+\setcounter{page}{1}
+
+\section{11$^{th}$ Maths - Chapter 10}
+This is Problem-3.1 from Exercise 10.3 
+\begin{enumerate}
+\item Reduce $x-\sqrt{3}y+8=0$ into normal form. Find its perpendicular distance from the origin and angle between perpendicular and the positive x-axis. 
+
+\solution 
+The given equation can be written as
+\begin{align}
+	\label{eq:Eq1}
+	\myvec{1 \\ -\sqrt{3}}^\top\vec{x}+8 &= 0 \\
+	\implies \vec{n} = \myvec{1 \\ -\sqrt{3}} \\
+	\implies \vec{m} = \myvec{1 \\ \frac{1}{\sqrt{3}}}
+\end{align}
+Equation \eqref{eq:Eq1} can be represented in parametric form as
+\begin{align}
+	\label{eq:Eq2}
+	\vec{x} = \vec{A}+\lambda\vec{m}
+\end{align}
+Here, $\vec{A}$ is a point on the given line. We choose  
+\begin{align}
+	\vec{A} &= \myvec{-8 \\ 0}\\
+	\label{eq:Eqx}
+	\eqref{eq:Eq2} \implies \vec{x} &= \myvec{-8 \\ 0}+\lambda\myvec{1 \\ \frac{1}{\sqrt{3}}} 
+\end{align}
+Let $\vec{O}$ be the origin. The perpendicular distance will be the minimum distance from $\vec{O}$ to the line. Let $\vec{P}$ be the foot of the perpendicular. This problem can be formulated as an optimization problem as follow:
+\begin{align}
+	\label{eq:Eq3}
+	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2\\
+	& \implies \min_{\lambda} \norm{ \myvec{-8 \\ 0}+\lambda\myvec{1 \\ \frac{1}{\sqrt{3}}} -\myvec{0 \\ 0}}^2\\
+	& \implies \min_{\lambda} \norm{ \myvec{\lambda-8 \\ \frac{\lambda}{\sqrt{3}}}}^2 \\ 
+	\implies f\brak{\lambda} &= \brak{\lambda-8}^2 + \brak{\frac{\lambda}{\sqrt{3}}}^2 \\ 
+	&= \lambda^2-16\lambda+64+\frac{\lambda^2}{3}\\
+	\label{eq:Eq4}
+	&= \frac{4}{3}\lambda^2-16\lambda+64
+\end{align}
+$\because$ the coefficient of $\lambda^2> 0$, equation \eqref{eq:Eq4} is a convex function.
+\begin{align}
+	f^\prime\brak{\lambda} &= \frac{8}{3}\lambda - 16 
+\end{align}	
+\begin{enumerate}
+\item Computing $\lambda_{min}$ using Derivate method:
+\begin{align}
+	f^{\prime\prime}\brak{\lambda} &= \frac{8}{3} \\
+	\because f^{\prime\prime}\brak{\lambda} > 0, f^\prime\brak{\lambda_{min}} = 0, \text{ for } \lambda_{min} \\ 
+	f^\prime\brak{\lambda_{min}} &= \frac{8}{3}\lambda_{min} - 16  = 0\\
+	\therefore \lambda_{min} &= \frac{16 \times 3}{8}  = 6
+\end{align}
+\item Computing $\lambda_{min}$ using Gradient Descent method:
+\begin{align}
+	\label{eq:grad_des}
+	\lambda_{n+1} &= \lambda_n - \alpha \nabla f\brak{\lambda_n}
+\end{align}
+Choosing
+\begin{enumerate}
+ \item $\alpha$ = 0.001
+ \item precision = 0.0000001
+ \item n = 10000000 
+ \item $\lambda_0$ = -5 
+\end{enumerate}
+\begin{align}
+	\lambda_{min} &= 6 
+\end{align}
+\end{enumerate}
+Both methods yielded same value of $\lambda_{min}$. Substituring this value in equation \eqref{eq:Eqx}
+\begin{align}
+	\vec{x}_{min} &= \vec{P} = \myvec{-8 \\ 0}+6\myvec{1 \\ \frac{1}{\sqrt{3}}}  \\
+	&= \myvec{-8 \\ 0}+\myvec{6 \\ \frac{6}{\sqrt{3}}} \\
+	&= \myvec{-2 \\ 2\sqrt{3}} \\
+	OP &= \norm{\vec{P}-\vec{O}}^2 \\ 
+	&= \norm{\myvec{-2 \\ 2\sqrt{3}}-\myvec{0 \\ 0}} \\
+	&= \sqrt{2^2 + 12} = \sqrt{16} = 4
+\end{align}
+The angle $\theta$ made by this perpendicular with x-axis is given by
+\begin{align}
+         \theta &= \tan^{-1}\brak{\frac{2\sqrt{3}}{-2}} \\
+	 &= \tan^{-1}\brak{-\sqrt{3}} \\
+	 &= 120\degree
+\end{align}
+The normal form of equation for straight line is given by
+\begin{align}
+	\myvec{\cos120\degree \\ \sin120\degree}^\top\vec{x} &= 4 
+\end{align}
+The relevant figure is as shown in \ref{fig:Fig1}
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{figs/problem3.1.pdf}
+	\end{center}
+\caption{}
+\label{fig:Fig1}
+\end{figure}
+\end{enumerate}
+\end{document}
