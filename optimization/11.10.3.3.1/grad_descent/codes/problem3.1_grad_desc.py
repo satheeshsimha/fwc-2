@@ -39,18 +39,22 @@ import shlex
 def f(x) :
     return ( 4/3*x**2 -16*x + 64 ) #Objective function
 
-def f1(x) :
-    return (  (x+8)/(math.sqrt(3)) ) #Objective function
 
-def f2(x) :
-    return ( -math.sqrt(3)*x) #Objective function
-#Plotting 4/3*x**2 -16*x + 64 
-x = np.linspace(3,9,100)#points on the x axis
+#Plotting 4/3*x**2 -16*x + 64  in Figure 1
+x = np.linspace(4,8,100)#points on the x axis
 y=  f(x) #Objective function
-#plt.plot(x,y, label = '$f(\lambda)= 4/3\lambda^2 -16\lambda + 64$')
-#plt.plot([lamda_n],[f(lamda_n)],marker='o',label='$\lambda_{Min}=6$')
+plt.figure(1)
+plt.plot(x,y, label = '$f(\lambda)= 4/3\lambda^2 -16\lambda + 64$')
+plt.plot([lamda_n],[f(lamda_n)],marker='o',label='$\lambda_{Min}$')
+plt.axis('equal')
+plt.grid()
+plt.xlabel('$x-Axis$')
+plt.ylabel('$y-Axis$')
+plt.title('Minimum Value of Function')
+plt.legend(loc = 'best')
+plt.savefig('../figs/problem3.1a.pdf')
 
-#plotting lines
+#plotting lines in Figure 2
 O = np.array([0,0])
 P = np.array([-2, 2*(math.sqrt(3))])
 A = np.array([-8,0])
@@ -59,27 +63,25 @@ B = np.array([4, 12/(math.sqrt(3))])
 x_OP = line_gen(O,P)
 x_AB = line_gen(A,B)
 
-x1 = np.linspace(-8,8, 400)
-y1 = f1(x1)
+plt.figure(2)
 
-x2 = np.linspace(-5,0,400)
-y2 = f2(x2)
+plt.plot(x_OP[0,:],x_OP[1,:],label = "Perpendicular") 
+plt.plot(x_AB[0,:],x_AB[1,:] ,label='$x-\sqrt{3}y+8=0$')
 
-#plt.plot(x_OP[0,:],x_OP[1,:],label = "Perpendicular") 
-#plt.plot(x_AB[0,:],x_AB[1,:] ,label='$x-\sqrt{3}y+8=0$')
+plt.scatter(P[0], P[1])
+plt.annotate('P', # this is the text
+            (P[0], P[1]), # this is the point to label
+            textcoords="offset points", # how to position the text
+            xytext=(0,7), # distance from text to points (x,y)
+            ha='center') # horizontal alignment can be left, right or center
 
-plt.plot(x2,y2,label = "Perpendicular") 
-plt.plot(x1,y1 ,label='$x-\sqrt{3}y+8=0$')
-
-
-plt.grid()
+plt.legend(loc = 'best')
 plt.axis('equal')
+plt.grid()
 plt.xlabel('$x-Axis$')
 plt.ylabel('$y-Axis$')
-plt.title('Minimum Value of Function')
-plt.legend(loc = 'best')
-#subprocess.run(shlex.split("termux-open ../figs/1.1.pdf"))
-#if using termux
-plt.savefig('../figs/problem3.1.pdf')
+plt.title('Perpendicular from Origin')
+plt.savefig('../figs/problem3.1b.pdf')
+
 #else
 plt.show()
