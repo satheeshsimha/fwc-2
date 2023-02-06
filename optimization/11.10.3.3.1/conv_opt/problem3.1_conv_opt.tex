@@ -72,8 +72,10 @@ Let $\vec{O}$ be the point from where we have to find the perpendicular distance
 \end{align}
 \begin{enumerate}
 \item Using parateric equation:
+
+Substituting \eqref{eq:Eq2} in \eqref{eq:Eq3}
 \begin{align}
-	& \eqref{eq:Eq3} \implies \min_{\lambda} \norm{ \vec{A}+\lambda\vec{m} -\vec{O}}^2\\
+	& \implies \min_{\lambda} \norm{ \vec{A}+\lambda\vec{m} -\vec{O}}^2\\
 	& \implies \min_{\lambda} \norm{ \lambda\vec{m} +\brak{\vec{A}-\vec{O}}}^2\\
 	&\implies f\brak{\lambda} = \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}}^\top \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
 	&= \sbrak{\lambda\vec{m^\top}+ \brak{\vec{A}-\vec{O}}^\top} \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
@@ -121,7 +123,7 @@ Substituring this value in equation \eqref{eq:Eq2}
 	&c = -8 \\
 	\label{eq:minval}
 	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2 = 4, 
-	 \vec{x} = \myvec{-2  \\ 3.46 } 
+	 \vec{x}_{min} = \myvec{-2  \\ 3.46 } 
 \end{align}
 \end{enumerate}
 The angle $\theta$ made by this perpendicular with x-axis is given by
