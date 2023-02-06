@@ -68,8 +68,8 @@ Let $\vec{O}$ be the point from where we have to find the perpendicular distance
 \begin{align}
 	\label{eq:Eq3}
 	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2\\
-	& \implies \min_{\lambda} \norm{ \vec{x}+\lambda\vec{m} -\vec{O}}^2\\
-	& \implies \min_{\lambda} \norm{ \lambda\vec{m} -\brak{\vec{A}-\vec{O}}}^2\\
+	& \implies \min_{\lambda} \norm{ \vec{A}+\lambda\vec{m} -\vec{O}}^2\\
+	& \implies \min_{\lambda} \norm{ \lambda\vec{m} +\brak{\vec{A}-\vec{O}}}^2\\
 	&\implies f\brak{\lambda} = \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}}^\top \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
 	&= \sbrak{\lambda\vec{m^\top}+ \brak{\vec{A}-\vec{O}}^\top} \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
 	&= \lambda^2\norm{\vec{m}}^2+ \lambda\brak{\vec{A}-\vec{O}}^\top\vec{m}+ \lambda\vec{m}^\top\brak{\vec{A}-\vec{O}}+ \norm{\vec{A}-\vec{O}}^2 \\  
