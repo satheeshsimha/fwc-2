@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  5 FEB 2023 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  6 FEB 2023 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -464,15 +464,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figs/problem3.1a.pdf, id=57, 462.52798pt x 346.89601pt>
+<figs/problem3.1a.pdf, id=51, 462.52798pt x 346.89601pt>
 File: figs/problem3.1a.pdf Graphic file (type pdf)
 <use figs/problem3.1a.pdf>
-Package pdftex.def Info: figs/problem3.1a.pdf  used on input line 114.
+Package pdftex.def Info: figs/problem3.1a.pdf  used on input line 125.
 (pdftex.def)             Requested size: 390.0pt x 292.51282pt.
-<figs/problem3.1b.pdf, id=58, 462.52798pt x 346.89601pt>
+<figs/problem3.1b.pdf, id=52, 462.52798pt x 346.89601pt>
 File: figs/problem3.1b.pdf Graphic file (type pdf)
 <use figs/problem3.1b.pdf>
-Package pdftex.def Info: figs/problem3.1b.pdf  used on input line 121.
+Package pdftex.def Info: figs/problem3.1b.pdf  used on input line 132.
 (pdftex.def)             Requested size: 390.0pt x 292.51282pt.
 
 
@@ -481,25 +481,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
 [3] [4 <./figs/problem3.1a.pdf>] [5 <./figs/problem3.1b.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
 
 (./problem3.1_conv_opt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `problem3.1_conv_opt.out' has not changed.
 (rerunfilecheck)             Checksum: E8524D831B853768E5E2E9F58C56C66F;58.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 9567 strings out of 481239
- 143446 string characters out of 5920376
- 421766 words of memory out of 5000000
+ 9571 strings out of 481239
+ 143500 string characters out of 5920376
+ 421768 words of memory out of 5000000
  24638 multiletter control sequences out of 15000+600000
  542969 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,42p,265b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,17n,42p,314b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
@@ -510,10 +510,10 @@ type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb>
-Output written on problem3.1_conv_opt.pdf (5 pages, 126775 bytes).
+Output written on problem3.1_conv_opt.pdf (5 pages, 127813 bytes).
 PDF statistics:
  221 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 128 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  19 words of extra memory for PDF output out of 10000 (max. 10000000)
 
