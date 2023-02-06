@@ -2,7 +2,7 @@
 def func_derivative(x):
     return 8/3*x - 16  # f'(x)
 
-def f(x) :
+def flambda(x) :
     return ( 4/3*x**2 -16*x + 64 ) #Objective function
 
 
@@ -12,6 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from numpy import linalg as LA
 import math
+from cvxpy import *
 
 import sys                                          #for path to external scripts
 sys.path.insert(0,'/sdcard/Download/sat/CoordGeo')
@@ -24,15 +25,34 @@ import subprocess
 import shlex
 #end if
 
+#Line parameters
+n =  np.array([1,-math.sqrt(3)]).reshape(2,-1)
+c = -8.0
+P = np.array([0,0]).reshape(2,-1)
+
+x = Variable((2,1))
+
+#Cost function
+f =  quad_form(x-P, np.eye(2))
+obj = Minimize(f)
+#Constraints
+constraints = [n.T@x == c]
+
+#solution
+solution = Problem(obj, constraints).solve()
+
+print("Perpendicular Distance:", math.sqrt(solution))
+print("Foot of perpendicular:", x.value)
+
 lamda_n = 16*3/8 # setting f'(x) zero
-print("The minimum value of function is at", lamda_n)
+print("The minimum value of lambda function is at", lamda_n)
 
 #Plotting 4/3*x**2 -16*x + 64  in Figure 1
 x = np.linspace(4,8,100)#points on the x axis
-y=  f(x) #Objective function
+y=  flambda(x) #Objective function
 plt.figure(1)
 plt.plot(x,y, label = '$f(\lambda)= 4/3\lambda^2 -16\lambda + 64$')
-plt.plot([lamda_n],[f(lamda_n)],marker='o',label='$\lambda_{Min}$')
+plt.plot([lamda_n],[flambda(lamda_n)],marker='o',label='$\lambda_{Min}$')
 plt.axis('equal')
 plt.grid()
 plt.xlabel('$x-Axis$')

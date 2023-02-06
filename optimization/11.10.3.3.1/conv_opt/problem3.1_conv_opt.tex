@@ -68,7 +68,12 @@ Let $\vec{O}$ be the point from where we have to find the perpendicular distance
 \begin{align}
 	\label{eq:Eq3}
 	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2\\
-	& \implies \min_{\lambda} \norm{ \vec{A}+\lambda\vec{m} -\vec{O}}^2\\
+	& \text{s.t.} \quad \vec{n}^T\vec{x} = c 
+\end{align}
+\begin{enumerate}
+\item Using parateric equation:
+\begin{align}
+	& \eqref{eq:Eq3} \implies \min_{\lambda} \norm{ \vec{A}+\lambda\vec{m} -\vec{O}}^2\\
 	& \implies \min_{\lambda} \norm{ \lambda\vec{m} +\brak{\vec{A}-\vec{O}}}^2\\
 	&\implies f\brak{\lambda} = \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}}^\top \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
 	&= \sbrak{\lambda\vec{m^\top}+ \brak{\vec{A}-\vec{O}}^\top} \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
@@ -109,6 +114,16 @@ Substituring this value in equation \eqref{eq:Eq2}
 	&= \norm{\myvec{-2 \\ 2\sqrt{3}}-\myvec{0 \\ 0}} \\
 	&= \sqrt{2^2 + 12} = \sqrt{16} = 4
 \end{align}
+\item Solving using cvxpy, with 
+\begin{align}
+	&\vec{n} = \myvec{1 \\ -\sqrt{3}} \\
+	&\vec{O} = \myvec{0 \\ 0} \\
+	&c = -8 \\
+	\label{eq:minval}
+	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2 = 4, 
+	 \vec{x} = \myvec{-2  \\ 3.46 } 
+\end{align}
+\end{enumerate}
 The angle $\theta$ made by this perpendicular with x-axis is given by
 \begin{align}
          \theta &= \tan^{-1}\brak{\frac{2\sqrt{3}}{-2}} \\
