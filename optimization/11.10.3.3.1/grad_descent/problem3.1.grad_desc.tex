@@ -62,27 +62,40 @@ Equation \eqref{eq:Eq1} can be represented in parametric form as
 	\label{eq:Eq2}
 	\vec{x} = \vec{A}+\lambda\vec{m}
 \end{align}
-Here, $\vec{A}$ is a point on the given line. We choose  
-\begin{align}
-	\vec{A} &= \myvec{-8 \\ 0}\\
-	\label{eq:Eqx}
-	\eqref{eq:Eq2} \implies \vec{x} &= \myvec{-8 \\ 0}+\lambda\myvec{1 \\ \frac{1}{\sqrt{3}}} 
-\end{align}
-Let $\vec{O}$ be the origin. The perpendicular distance will be the minimum distance from $\vec{O}$ to the line. Let $\vec{P}$ be the foot of the perpendicular. This problem can be formulated as an optimization problem as follow:
+Here, $\vec{A}$ is a point on the given line. 
+
+Let $\vec{O}$ be the point from where we have to find the perpendicular distance. The perpendicular distance will be the minimum distance from $\vec{O}$ to the line. Let $\vec{P}$ be the foot of the perpendicular. This problem can be formulated as an optimization problem as follow:
 \begin{align}
 	\label{eq:Eq3}
 	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2\\
-	& \implies \min_{\lambda} \norm{ \myvec{-8 \\ 0}+\lambda\myvec{1 \\ \frac{1}{\sqrt{3}}} -\myvec{0 \\ 0}}^2\\
-	& \implies \min_{\lambda} \norm{ \myvec{\lambda-8 \\ \frac{\lambda}{\sqrt{3}}}}^2 \\ 
-	\implies f\brak{\lambda} &= \brak{\lambda-8}^2 + \brak{\frac{\lambda}{\sqrt{3}}}^2 \\ 
-	&= \lambda^2-16\lambda+64+\frac{\lambda^2}{3}\\
+	& \text{s.t.} \quad \vec{n}^T\vec{x} = c 
+\end{align}
+Substituting \eqref{eq:Eq2} in \eqref{eq:Eq3}
+\begin{align}
+	& \implies \min_{\lambda} \norm{ \vec{A}+\lambda\vec{m} -\vec{O}}^2\\
+	& \implies \min_{\lambda} \norm{ \lambda\vec{m} +\brak{\vec{A}-\vec{O}}}^2\\
+	&\implies f\brak{\lambda} = \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}}^\top \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
+	&= \sbrak{\lambda\vec{m^\top}+ \brak{\vec{A}-\vec{O}}^\top} \sbrak{\lambda\vec{m}+ \brak{\vec{A}-\vec{O}}} \\  
+	&= \lambda^2\norm{\vec{m}}^2+ \lambda\brak{\vec{A}-\vec{O}}^\top\vec{m}+ \lambda\vec{m}^\top\brak{\vec{A}-\vec{O}}+ \norm{\vec{A}-\vec{O}}^2 \\  
 	\label{eq:Eq4}
-	&= \frac{4}{3}\lambda^2-16\lambda+64
+	&= \lambda^2\norm{\vec{m}}^2+ 2\lambda\brak{\vec{A}-\vec{O}}^\top\vec{m}+ \norm{\vec{A}-\vec{O}}^2  
 \end{align}
 $\because$ the coefficient of $\lambda^2> 0$, equation \eqref{eq:Eq4} is a convex function.
 \begin{align}
-	f^\prime\brak{\lambda} &= \frac{8}{3}\lambda - 16 
+	\label{eq:Eq5}
+	f^\prime\brak{\lambda} &= 2\lambda\norm{\vec{m}}^2+ 2\brak{\vec{A}-\vec{O}}^\top\vec{m}
 \end{align}	
+We choose  
+\begin{align}
+	\vec{A} &= \myvec{-8 \\ 0}\\
+	\vec{O} &= \myvec{ 0 \\ 0}
+\end{align}
+Substituting the values of $\vec{A}$, $\vec{O}$ and $\vec{m}$ in equation \eqref{eq:Eq4} and \eqref{eq:Eq5}
+\begin{align}
+	\label{eq:Eq6}
+	\implies f\brak{\lambda} &= \frac{4}{3}\lambda^2-16\lambda+64 \\ 
+	f^\prime\brak{\lambda} &= \frac{8}{3}\lambda - 16
+\end{align}
 Computing $\lambda_{min}$ using Gradient Descent method:
 \begin{align}
 	\label{eq:grad_des}
@@ -98,7 +111,7 @@ Choosing
 \begin{align}
 	\lambda_{min} &= 6 
 \end{align}
-Substituring this value in equation \eqref{eq:Eqx}
+Substituting the values of $\vec{A}$, $\vec{m}$ and $\lambda_{min}$ in equation \eqref{eq:Eq2} 
 \begin{align}
 	\vec{x}_{min} &= \vec{P} = \myvec{-8 \\ 0}+6\myvec{1 \\ \frac{1}{\sqrt{3}}}  \\
 	&= \myvec{-8 \\ 0}+\myvec{6 \\ \frac{6}{\sqrt{3}}} \\
