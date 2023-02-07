@@ -50,25 +50,10 @@ This is Problem-3.1 from Exercise 10.3
 \item Reduce $x-\sqrt{3}y+8=0$ into normal form. Find its perpendicular distance from the origin and angle between perpendicular and the positive x-axis. 
 
 \solution 
-The given equation can be written as
-\begin{align}
-	\label{eq:Eq1}
-	\myvec{1 \\ -\sqrt{3}}^\top\vec{x}+8 &= 0 \\
-	\implies \vec{n} = \myvec{1 \\ -\sqrt{3}} \\
-	\implies \vec{m} = \myvec{1 \\ \frac{1}{\sqrt{3}}}
-\end{align}
-Equation \eqref{eq:Eq1} can be represented in parametric form as
+Equation for a line  can be represented in parametric form as
 \begin{align}
 	\label{eq:Eq2}
 	\vec{x} = \vec{A}+\lambda\vec{m}
-\end{align}
-Here, $\vec{A}$ is a point on the given line. 
-
-Let $\vec{O}$ be the point from where we have to find the perpendicular distance. The perpendicular distance will be the minimum distance from $\vec{O}$ to the line. Let $\vec{P}$ be the foot of the perpendicular. This problem can be formulated as an optimization problem as follow:
-\begin{align}
-	\label{eq:Eq3}
-	&  \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2\\
-	& \text{s.t.} \quad \vec{n}^T\vec{x} = c 
 \end{align}
 We choose  
 \begin{align}
