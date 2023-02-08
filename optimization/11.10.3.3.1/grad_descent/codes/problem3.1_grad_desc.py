@@ -1,7 +1,8 @@
 #Gradient Descent
 
 lamda_n = -5 # Start value at lamda_n= -5
-alpha = 0.001 # step size multiplier
+#alpha = 0.001 # step size multiplier
+alpha = 5.9/8 # step size multiplier
 precision = 0.0000001
 previous_step_size = 1 
 max_count = 10000000 # maximum number of iterations
