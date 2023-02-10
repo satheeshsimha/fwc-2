@@ -15,43 +15,6 @@ from params import *
 #if using termux
 import subprocess
 import shlex
-#end if
-#omat = np.array([[0.0, -1.0],[0.0, 1.0]])
-
-#Generating points on a circle
-#def circ_gen(O,r):
-#	len = 1000
-#	theta = np.linspace(0,2*np.pi,len)
-#	x_circ = np.zeros((2,len))
-#	x_circ[0,:] = r*np.cos(theta)
-#	x_circ[1,:] = r*np.sin(theta)
-#	x_circ = (x_circ.T + O).T
-#	return x_circ
-
-#Generate line points
-#def line_gen(A,B):
-#  len =10
-#  dim = A.shape[0]
-#  x_AB = np.zeros((dim,len))
-#  lam_1 = np.linspace(0,1,len)
-#  for i in range(len):
-#    temp1 = A + lam_1[i]*(B-A)
-#    x_AB[:,i]= temp1.T
-#  return x_AB
-
-#intersection of two lines
-#def line_intersect(n1,c1,n2,c2):
-#  n=np.vstack((n1.T,n2.T))
-#  p = np.array([[c1],[c2]])
-#  #intersection
-#  p=np.linalg.inv(n)@p
-#  return p
-
-#Intersection of two lines
-#def perp_foot(n,cn,P):
-#  m = omat@n
-#  cm = (m.T@P)[0][0]
-#  return line_intersect(n,cn,m,cm)
 
 #Input parameters and other points
 iters = 1000 
@@ -94,11 +57,7 @@ plt.plot(x_old[0],x_old[1],'k.')
 plt.text(x_old[0],x_old[1]+1e-2,'P')
 plt.grid()
 plt.axis('equal')
-#plt.tight_layout()
-#ax = plt.gca()
-#ax.set_aspect('equal')
 plt.title('Perpendicular from Origin')
 plt.savefig('../figs/problem3.1.pdf')
-#os.system('termux-open ../figs/gd_lagrange.png')
 #else
 plt.show()
