@@ -136,7 +136,7 @@ Substituring this value in \eqref{eq:Eq4}
 \end{align}
 Substituting the value of $\lambda$ in    \eqref{eq:Eqxm}
 \begin{align}
-	\vec{x}_{m} &= \myvec{ \frac{1}{1-\frac{1}{2}} \\ -2\frac{1}{2}+2} \\
+	\vec{x}_{m} &= \vec{q} = \myvec{ \frac{1}{1-\frac{1}{2}} \\ -2\frac{1}{2}+2} \\
 	&= \myvec{2 \\ 1}
 \end{align}
 \item When $\lambda = 1$. 
@@ -145,6 +145,14 @@ Substituting the value of $\lambda$ in    \eqref{eq:Eqxm}
 \end{align}
 This is an invalid solution. 
 \end{enumerate}
+Given the point of contact $\vec{q}$, the equation to the normal is given by
+\begin{align}
+	&\brak{\vec{V}\vec{q}+\vec{u}}^\top\vec{R}\brak{\vec{x}-\vec{q}} = 0 \\
+	&\implies \brak{\myvec{1&0\\0&0}\myvec{2\\1}+\myvec{0 \\ -2}}^\top \myvec{0&1 \\-1&0}\brak{\vec{x}-\myvec{2\\1}} =0\\
+	&\implies \myvec{2&-2} \myvec{0&1 \\-1&0}\brak{\vec{x}-\myvec{2\\1}} = 0 \\
+	&\implies \myvec{2&-2} \myvec{0&1 \\-1&0}\brak{\vec{x}-\myvec{2\\1}} = 0 \\
+	&\implies \myvec{1&1}\vec{x} = 3 
+\end{align}
 The relevant figure is shown in \ref{fig:Fig1}
 \begin{figure}[!h]
 	\begin{center}
