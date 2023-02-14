@@ -125,18 +125,19 @@ Then, we get
 	\vec{x}_{m} &= \myvec{ \frac{1}{1-\lambda} \\ -2\lambda+2}
 \end{align}
 Substituring this value in \eqref{eq:Eq4}
-\begin{align}
-	&\myvec{\frac{1}{1-\lambda} & -2\lambda+2}\myvec{1 & 0 \\ 0 & 0}\myvec{\frac{1}{1-\lambda} \\ -2\lambda+2} + 2\myvec{0 & -2}\myvec{\frac{1}{1-\lambda}} = 0 \\ 
-	&\implies \myvec{\frac{1}{1-\lambda} & 0}\myvec{\frac{1}{1-\lambda} \\ -2\lambda+2} - 4\brak{-2\lambda+2} = 0 \\
-	&\implies 8\brak{\lambda^3 -3\lambda^2+3\lambda-1} +1 = 0 \\ 
-	&\implies \brak{\lambda^3 -3\lambda^2+3\lambda-1}  = -\frac{1}{8} \\ 
-	& \implies \brak{\lambda-1}^3 = -\frac{1}{8} \\ 
-	& \implies \lambda-1 = -\frac{1}{2} \\
-	& \implies \lambda = \frac{1}{2}
-\end{align}
+\begin{multline}
+	\myvec{\frac{1}{1-\lambda} & -2\lambda+2}\myvec{1 & 0 \\ 0 & 0}\myvec{\frac{1}{1-\lambda} \\ -2\lambda+2} \\ 
+	+ 2\myvec{0 & -2}\myvec{\frac{1}{1-\lambda}} = 0 \\ 
+	\implies \myvec{\frac{1}{1-\lambda} & 0}\myvec{\frac{1}{1-\lambda} \\ -2\lambda+2} - 4\brak{-2\lambda+2} = 0 \\
+	\implies 8\brak{\lambda^3 -3\lambda^2+3\lambda-1} +1 = 0 \\ 
+	\implies \brak{\lambda^3 -3\lambda^2+3\lambda-1}  = -\frac{1}{8} \\ 
+	 \implies \brak{\lambda-1}^3 = -\frac{1}{8} \\ 
+	 \implies \lambda-1 = -\frac{1}{2} \\
+	 \implies \lambda = \frac{1}{2}
+\end{multline}
 Substituting the value of $\lambda$ in    \eqref{eq:Eqxm}
 \begin{align}
-	\vec{x}_{m} &= \vec{q} = \myvec{ \frac{1}{1-\frac{1}{2}} \\ -2\frac{1}{2}+2} \\
+	\vec{x}_{m} &= \vec{q} = \myvec{ \frac{1}{1-\frac{1}{2}} \\ -2\brak{\frac{1}{2}}+2} \\
 	&= \myvec{2 \\ 1}
 \end{align}
 \item When $\lambda = 1$. 
@@ -150,7 +151,7 @@ Given the point of contact $\vec{q}$, the equation to the normal is given by
 	&\brak{\vec{V}\vec{q}+\vec{u}}^\top\vec{R}\brak{\vec{x}-\vec{q}} = 0 \\
 	&\implies \brak{\myvec{1&0\\0&0}\myvec{2\\1}+\myvec{0 \\ -2}}^\top \myvec{0&1 \\-1&0}\brak{\vec{x}-\myvec{2\\1}} =0\\
 	&\implies \myvec{2&-2} \myvec{0&1 \\-1&0}\brak{\vec{x}-\myvec{2\\1}} = 0 \\
-	&\implies \myvec{2&-2} \myvec{0&1 \\-1&0}\brak{\vec{x}-\myvec{2\\1}} = 0 \\
+	&\implies \myvec{2&2}\brak{\vec{x}-\myvec{2\\1}} = 0 \\
 	&\implies \myvec{1&1}\vec{x} = 3 
 \end{align}
 The relevant figure is shown in \ref{fig:Fig1}
