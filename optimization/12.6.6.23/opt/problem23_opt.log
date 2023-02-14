@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  14 FEB 2023 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  14 FEB 2023 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**problem23_conic.tex
-(./problem23_conic.tex
+**problem23_opt.tex
+(./problem23_opt.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -356,8 +356,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count280
 \l__pdf_internal_box=\box51
 )
-(./problem23_conic.aux)
-\openout1 = `problem23_conic.aux'.
+(./problem23_opt.aux)
+\openout1 = `problem23_opt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
@@ -420,9 +420,9 @@ LaTeX Info: Redefining \ref on input line 38.
 LaTeX Info: Redefining \pageref on input line 38.
 LaTeX Info: Redefining \nameref on input line 38.
 
-(./problem23_conic.out) (./problem23_conic.out)
+(./problem23_opt.out) (./problem23_opt.out)
 \@outlinefile=\write3
-\openout3 = `problem23_conic.out'.
+\openout3 = `problem23_opt.out'.
 
 LaTeX Info: Redefining \celsius on input line 38.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 38.
@@ -464,41 +464,50 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figs/problem23.pdf, id=57, 462.52798pt x 346.89601pt>
+<figs/problem23.pdf, id=66, 462.52798pt x 346.89601pt>
 File: figs/problem23.pdf Graphic file (type pdf)
 <use figs/problem23.pdf>
-Package pdftex.def Info: figs/problem23.pdf  used on input line 116.
+Package pdftex.def Info: figs/problem23.pdf  used on input line 151.
 (pdftex.def)             Requested size: 390.0pt x 292.51282pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
- [3 <./figs/problem23.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
- (./problem23_conic.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
-Package rerunfilecheck Info: File `problem23_conic.out' has not changed.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
+[3] [4 <./figs/problem23.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+ (./problem23_opt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package rerunfilecheck Info: File `problem23_opt.out' has not changed.
 (rerunfilecheck)             Checksum: 7ABC6CCE6851B39D521E873EEA8E0BEE;57.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 9552 strings out of 481239
- 143137 string characters out of 5920376
- 425716 words of memory out of 5000000
- 24632 multiletter control sequences out of 15000+600000
- 542969 words of font info for 65 fonts, out of 8000000 for 9000
+ 9575 strings out of 481239
+ 143346 string characters out of 5920376
+ 426144 words of memory out of 5000000
+ 24641 multiletter control sequences out of 15000+600000
+ 543316 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,42p,261b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,18n,42p,259b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb>
-Output written on problem23_conic.pdf (3 pages, 93879 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on problem23_opt.pdf (4 pages, 143161 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 28 named destinations out of 1000 (max. 500000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
  14 words of extra memory for PDF output out of 10000 (max. 10000000)
 
