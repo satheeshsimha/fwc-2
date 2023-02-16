@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amssymb} % for \because
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{extarrows} % for Row operations arrows
+\usepackage{listings}
+\lstset{
+  frame=single,
+  breaklines=true
+}
+\usepackage{hyperref}
+  
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+\usepackage{gensymb}
+
+
+%New macro definitions
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+
+\begin{document}
+
+\begin{center}
+	\title{\textbf{Quadratric Programming}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+\setcounter{page}{1}
+
+\section{12$^{th}$ Maths - Chapter 6}
+This is Problem-23 from Exercise 6.6 
+\begin{enumerate}
+	\item Find the equation of the normal to the curve $x^2=4y$ and passing through the point $(1,2)$.
+
+\solution 
+The given equation of the curve can be written as  
+\begin{align}
+	\label{eq:parabolaEq2}
+	g\brak{\vec{x}} = \vec{x}^T\vec{V}\vec{x} + 2\vec{u}^T\vec{x} + f = 0 
+\end{align}
+where
+\begin{align}
+	\label{eq:eqV}
+	\vec{V} &= \myvec{ 1 & 0 \\ 0 & 0} \\
+	\label{eq:eqU}
+	\vec{u} &= \myvec{0 \\ -2} \\
+	\label{eq:eqF}
+	f &= 0 
+\end{align}
+We are given that 
+\begin{align}
+	\vec{h} &= \myvec{1 \\ 2}
+\end{align}
+This can be formulated as optimization problem as below:
+\begin{align}
+	\label{eq:Eq3}
+	&  \min_{\vec{x}} \quad \text{f}\brak{\vec{x}} = \norm{\vec{x}-\vec{h}}^2\\
+	\label{eq:Eq4}
+	& \text{s.t.}\quad g\brak{\vec{x}} = \vec{x}^T\vec{V}\vec{x} + 2\vec{u}^T\vec{x} + f = 0  
+\end{align}
+First we show that, whether \eqref{eq:Eq4} is convex or not. Assume 
+    $\vec{x_1}$ and $\vec{x_2}$ satisfy $g\brak{\vec{x}} = 0$. Then, 
+\begin{align}
+	\label{eq:x1-parab} 
+	g\brak{\vec{x_1}} &= \vec{x_1}^\top\vec{Vx_1} + 2\vec{u}^\top\vec{x_1} + f = 0  \\ 
+	\label{eq:x2-parab}
+	g\brak{\vec{x_2}} &= \vec{x_2}^\top\vec{Vx_2} + 2\vec{u}^\top\vec{x_2} + f = 0 
+\end{align}
+Then, for any $0 \le \lambda \le 1$, substituting
+\begin{align}
+       \vec{x_\lambda} \leftarrow \lambda\vec{x_1} + \brak{1-\lambda}\vec{x_2}
+\end{align}
+into \eqref{eq:Eq4}, we get
+\begin{multline}
+        \label{eq:Eq5}
+	g\brak{\vec{x_\lambda}} = \brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}}^\top\vec{V} \brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}} \\
+	+ 2\vec{u}^\top\brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}} +f \\
+	\implies 
+	\brak{\lambda\vec{x_1}^\top+\brak{1-\lambda}\vec{x_2}^\top}\vec{V} \brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}} \\
+	+ 2\vec{u}^\top\brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}} +f \\
+	\implies 
+	\brak{\lambda\vec{x_1}^\top\vec{V}+\vec{x_2}^\top\vec{V}-\lambda\vec{x_2}^\top\vec{V}} \brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}} \\
+	+ 2\vec{u}^\top\brak{\lambda\vec{x_1}+\brak{1-\lambda}\vec{x_2}} +f \\
+	\implies 
+	\lambda^2\vec{x_1}^\top\vec{V}\vec{x_1}+\lambda\vec{x_2}^\top\vec{V}\vec{x_1}-\lambda^2\vec{x_2}^\top\vec{V}\vec{x_1}+ \lambda\vec{x_1}^\top\vec{V}\vec{x_2}+\vec{x_2}^\top\vec{V}\vec{x2} \\
+	-\lambda\vec{x_2}^\top\vec{V}\vec{x_2}-\lambda^2\vec{x_1}^\top\vec{V}\vec{x_2}-\lambda\vec{x_2}^\top\vec{V}\vec{x_2}+\lambda^2\vec{x_2}^\top\vec{V}\vec{x_2} \\
+	+ 2\lambda\vec{u}^\top\vec{x_1}+2\vec{u}^\top\vec{x_2}-2\lambda\vec{u}^\top\vec{x_2} +f 
+\end{multline}
+		Multiplying \eqref{eq:x1-parab} by $\lambda$ and \eqref{eq:x2-parab} by $\brak{1-\lambda}$ and adding
+\begin{multline}
+	\label{eq:eqf}
+	\lambda g\brak{\vec{x_1}}+ \brak{1-\lambda}g\brak{\vec{x_2}} = \lambda\vec{x_1}^\top\vec{Vx_1} + 2\lambda\vec{u}^\top\vec{x_1} + \lambda f + \vec{x_2}^\top\vec{V}\vec{x_2}+2\vec{u}^\top\vec{x_2}+f\\ 
+	-\lambda\vec{x_2}^\top\vec{V}\vec{x_2}+2\lambda\vec{u}^\top\vec{x_2}-\lambda f = 0 \\
+	\implies f = 
+	-\lambda\vec{x_1}^\top\vec{Vx_1} - 2\lambda\vec{u}^\top\vec{x_1} -\vec{x_2}^\top\vec{V}\vec{x_2}-2\vec{u}^\top\vec{x_2}\\ 
+	+\lambda\vec{x_2}^\top\vec{V}\vec{x_2}-2\lambda\vec{u}^\top\vec{x_2}
+\end{multline}
+Substituting the value of $f$ from \eqref{eq:eqf} in \eqref{eq:Eq5} and simplifying
+\begin{align}
+	\label{eq:Eq6}
+	\eqref{eq:Eq5} \implies \brak{\vec{x_1}-\vec{x_2}}^\top\vec{V}\brak{\vec{x_1}-\vec{x_2}} 
+\end{align}
+Since $\vec{V}$ is a semi-definite matrix,the value of \eqref{eq:Eq6} will be $\ge 0$ contracdicting the equality in \eqref{eq:Eq4}. 
+Hence, the optimization problem is nonconvex. However, by relaxing the constraint in \eqref{eq:Eq4} as
+\begin{align}
+	\label{eq:Eq7}
+	& g\brak{\vec{x}} = \vec{x}^T\vec{V}\vec{x} + 2\vec{u}^T\vec{x} + f \le 0  
+\end{align}
+the optimization problem can be made convex. Applying convexity property to \eqref{eq:Eq7} and simplifying, \eqref{eq:Eq6} yields to
+\begin{align}
+	\label{eq:Eq8}
+	\brak{\vec{x_1}-\vec{x_2}}^\top\vec{V}\brak{\vec{x_1}-\vec{x_2}} \ge 0 
+\end{align}
+Hence the revised constraint makes it a convex optimization problem.
+
+Using cvxpy, input the objective function, contraints and solve. However, resultant optimal point is the given point itself. This is because, the point is inside the parabola. Looks like, this is a limitation of cvxpy.
+\end{enumerate}
+\end{document}

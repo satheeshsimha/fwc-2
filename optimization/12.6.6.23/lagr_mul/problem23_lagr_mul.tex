@@ -75,22 +75,7 @@ This can be formulated as optimization problem as below:
 	\label{eq:Eq4}
 	& \text{s.t.}\quad g\brak{\vec{x}} = \vec{x}^T\vec{V}\vec{x} + 2\vec{u}^T\vec{x} + f = 0  
 \end{align}
-First we show that, \eqref{eq:Eq4} is not convex. Suppose 
-    $\vec{x_1}$ and $\vec{x_2}$ satisfy $g\brak{\vec{x}} = 0$. Then, 
-\begin{align}
-        \vec{x_1}^\top\vec{Vx_1} + 2\vec{u}^\top\vec{x_1} + f &= 0 \label{eq:x1-parab} \\
-        \vec{x_2}^\top\vec{Vx_2} + 2\vec{u}^\top\vec{x_2} + f &= 0 \label{eq:x2-parab}
-\end{align}
-Then, for any $0 \le \lambda \le 1$, substituting
-\begin{align}
-       \vec{x_\lambda} \leftarrow \lambda\vec{x_1} + \brak{1-\lambda}\vec{x_2}
-\end{align}
-into \eqref{eq:Eq4}, we get
-\begin{align}
-        g\brak{\vec{x_\lambda}} = \lambda\brak{\lambda-1}\brak{\vec{x_1}-\vec{x_2}}^\top\vec{V}\brak{\vec{x_1}-\vec{x_2}} + f \neq 0
-        \label{eq:nonconvex}
-\end{align}
-Hence, the optimization problem is nonconvex. The constraints throw an error when \textit{cvxpy} is used. 
+It is already proved that the optimization problem is nonconvex. The constraints throw an error when \textit{cvxpy} is used. 
 
 We will use Lagrange multipliers method to find the optimum value. Define
 \begin{align}

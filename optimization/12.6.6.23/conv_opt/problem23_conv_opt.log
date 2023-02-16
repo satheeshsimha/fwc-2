@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  14 FEB 2023 23:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  16 FEB 2023 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**problem23_opt.tex
-(./problem23_opt.tex
+**problem23_conv_opt.tex
+(./problem23_conv_opt.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -356,8 +356,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count280
 \l__pdf_internal_box=\box51
 )
-(./problem23_opt.aux)
-\openout1 = `problem23_opt.aux'.
+(./problem23_conv_opt.aux)
+\openout1 = `problem23_conv_opt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
@@ -420,9 +420,9 @@ LaTeX Info: Redefining \ref on input line 38.
 LaTeX Info: Redefining \pageref on input line 38.
 LaTeX Info: Redefining \nameref on input line 38.
 
-(./problem23_opt.out) (./problem23_opt.out)
+(./problem23_conv_opt.out) (./problem23_conv_opt.out)
 \@outlinefile=\write3
-\openout3 = `problem23_opt.out'.
+\openout3 = `problem23_conv_opt.out'.
 
 LaTeX Info: Redefining \celsius on input line 38.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 38.
@@ -463,47 +463,60 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<figs/problem23.pdf, id=76, 462.52798pt x 346.89601pt>
-File: figs/problem23.pdf Graphic file (type pdf)
-<use figs/problem23.pdf>
-Package pdftex.def Info: figs/problem23.pdf  used on input line 160.
-(pdftex.def)             Requested size: 390.0pt x 292.51282pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
- [4 <./figs/problem23.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
- (./problem23_opt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
-Package rerunfilecheck Info: File `problem23_opt.out' has not changed.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (10.47203pt too wide) detected at line 114
+ []$[]  \OML/cmm/m/it/12 ^^Ug [] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 g [] \OT
+1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^U[][][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 ^
+^U\OT1/cmr/bx/n/12 u[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^Uf \OT1/cmr/m/n/1
+2 + [][]\OT1/cmr/bx/n/12 V[] \OT1/cmr/m/n/12 + 2\OT1/cmr/bx/n/12 u[][] \OT1/cmr
+/m/n/12 + \OML/cmm/m/it/12 f$ 
+ []
+
+
+Overfull \hbox (19.4772pt too wide) in paragraph at lines 119--122
+\OT1/cmr/m/n/12 Since $\OT1/cmr/bx/n/12 V$ \OT1/cmr/m/n/12 is a semi-definite m
+a-trix,the value of [] will be $\OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 0$ con-tra
+c-dict-ing
+ []
+
+
+Overfull \hbox (6.83292pt too wide) in paragraph at lines 133--134
+[]\OT1/cmr/m/n/12 Using cvxpy, in-put the ob-jec-tive func-tion, con-traints an
+d solve. How-ever,
+ []
+
+[2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
+ (./problem23_conv_opt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
+Package rerunfilecheck Info: File `problem23_conv_opt.out' has not changed.
 (rerunfilecheck)             Checksum: 7ABC6CCE6851B39D521E873EEA8E0BEE;57.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 9574 strings out of 481239
- 143333 string characters out of 5920376
- 424144 words of memory out of 5000000
- 24641 multiletter control sequences out of 15000+600000
- 543316 words of font info for 66 fonts, out of 8000000 for 9000
+ 9539 strings out of 481239
+ 142881 string characters out of 5920376
+ 419128 words of memory out of 5000000
+ 24629 multiletter control sequences out of 15000+600000
+ 542969 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,18n,42p,259b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,42p,264b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on problem23_opt.pdf (4 pages, 144476 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb>
+Output written on problem23_conv_opt.pdf (3 pages, 91126 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

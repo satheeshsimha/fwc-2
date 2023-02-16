@@ -43,7 +43,7 @@ def plot_circ(p):
 num_points = 100
 x = np.linspace(-5,5,num_points)
 y = 0.25*(x**2)   # y = 0.5*(3-x^2) 
-x_old = 4
+x_old = 4 
 
 #Iterate until the dot product is zero or the iterations are reached
 while(i<iters and dot_p != 0):
@@ -61,16 +61,17 @@ while(i<iters and dot_p != 0):
     dec, integ = np.modf(dot_p)
     dot_p = np.abs(integ+np.round(dec,2))
 
-
 plot_circ(q) #Draw the circle for final termination point
 # Generating normal  
 M = line_gen(h,q)
 print("q", q)
+m = (1/m[0])*m
 n = m.T@R
+n = (1/n[0])*n
 # Generating tangent  
-d = (n.T@h)/2 #Intercept for Tangent
+d = -(n.T@q)#Intercept for Tangent
 D= np.array(([0,d]))
-tangent_A = 1*m+D  
+tangent_A = 4*m+D  
 tangent_B = -2*m+D
 tangent_AB = line_gen(tangent_A, tangent_B)
 
