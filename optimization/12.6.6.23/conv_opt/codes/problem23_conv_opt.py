@@ -20,7 +20,7 @@ import shlex
 #Input parameters of the parabola
 V = np.array([[1,0],[0,0]])
 u = np.array([0,-2]).reshape(2,-1)
-h = np.array([4,-2]).reshape(2,-1)
+h = np.array([1,2]).reshape(2,-1)
 
 
 x = Variable((2,1))
