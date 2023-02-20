@@ -80,8 +80,8 @@ It is already proved that the optimization problem is nonconvex. The constraints
 We will use Gradient Descent method to find the optimum value. Define
 \begin{align}
 	\label{eq:grad_des}
-	x_{n+1} = x_n - \alpha \nabla g\brak{x_n} \\
-	\text{ with loop condition as } \brak{\vec{x}-\vec{h}}^\top\nabla g\brak{x_n} \quad != 0 
+	\vec{x}_{n+1} = \vec{x}_n - \alpha \nabla g\brak{\vec{x}_n} \\
+	\text{ with loop condition as } \brak{\vec{x}-\vec{h}}^\top\nabla g\brak{\vec{x}_n} \quad != 0 
 \end{align}
 Choosing
 \begin{enumerate}
