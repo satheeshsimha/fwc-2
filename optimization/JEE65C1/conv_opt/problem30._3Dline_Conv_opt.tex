@@ -61,12 +61,11 @@ The given equation can be written as
 	\vec{A} &= \myvec{1\\-1\\0} + \lambda_1\myvec{2\\3\\1}\\
         \vec{B} &= \myvec{-1\\2\\2} + \lambda_2\myvec{5\\1\\0} \\
 \end{align}
-This can be formulated as an optimization problem as below:
+This can be formulated as an unconstrained optimization problem as below:
 \begin{align}
-	&  \min_{\lambda_1, \lambda_2} \quad \norm{\vec{B}-\vec{A}}^2\\ 
-	& \text{s.t.}  \lambda_1 \ge 0 , \lambda_2 \ge 0
+	&  \min_{\lambda_1, \lambda_2} \quad \norm{\vec{B}-\vec{A}}^2 
 \end{align}
-Setting these parameters in cvxpy and solving, yield
+Setting these parameters in cvxpy and solving, yields
 \begin{align}
         \lambda_1 &= 1.4 , \lambda_2 = 0.969 \\
 	\vec{A} &= \myvec{3.8\\3.2\\ 1.4}\\

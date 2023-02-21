@@ -35,18 +35,16 @@ lamda2 = Variable()
 A = ax1 + lamda1*am1
 B = ax2 + lamda2*am2
 
-# Create two constraints.
-constraints = [ lamda1 >= 0, lamda2 >= 0 ]
-
 # Form objective function
 obj = Minimize(norm(A -B))
 
 # Form and solve problem.
-prob = Problem(obj, constraints)
+prob = Problem(obj, [])
 prob.solve()
 
 A = x1+lamda1.value*m1
 B = x2+lamda2.value*m2
+
 print("LAmbda values = ", lamda1.value, lamda2.value)
 print("Distance=", obj.value)
 print("Point on line 1",A) 
