@@ -28,24 +28,25 @@ am1 = m1.reshape(3,-1)
 m2 = np.array([5,1,0])
 am2 = m2.reshape(3,-1)
 
+M = np.block([[m1],[m2]]).T
 # Create two scalar optimization variables.
-lamda1 = Variable()
-lamda2 = Variable()
+lamda = Variable((2,1))
 #Parametric equation of 2 lines
-A = ax1 + lamda1*am1
-B = ax2 + lamda2*am2
+#A = ax1 + lamda1*am1
+#B = ax2 + lamda2*am2
 
 # Form objective function
-obj = Minimize(norm(A -B))
+obj = Minimize(norm(M@lamda + (ax2-ax1)))
 
 # Form and solve problem.
 prob = Problem(obj, [])
 prob.solve()
 
-A = x1+lamda1.value*m1
-B = x2+lamda2.value*m2
+#Optimal points on each line
+A = x1-lamda.value[0]*m1
+B = x2+lamda.value[1]*m2
 
-print("LAmbda values = ", lamda1.value, lamda2.value)
+print("Lambda values = ", -lamda.value[0], lamda.value[1])
 print("Distance=", obj.value)
 print("Point on line 1",A) 
 print("Point on line 2",B)
