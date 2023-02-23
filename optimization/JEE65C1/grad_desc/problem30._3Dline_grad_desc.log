@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  23 FEB 2023 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.30)  23 FEB 2023 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**problem30._3Dline_Conv_opt.tex
-(./problem30._3Dline_Conv_opt.tex
+**problem30._3Dline_grad_desc.tex
+(./problem30._3Dline_grad_desc.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -364,8 +364,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count280
 \l__pdf_internal_box=\box51
 )
-(./problem30._3Dline_Conv_opt.aux)
-\openout1 = `problem30._3Dline_Conv_opt.aux'.
+(./problem30._3Dline_grad_desc.aux)
+\openout1 = `problem30._3Dline_grad_desc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
@@ -428,9 +428,9 @@ LaTeX Info: Redefining \ref on input line 39.
 LaTeX Info: Redefining \pageref on input line 39.
 LaTeX Info: Redefining \nameref on input line 39.
 
-(./problem30._3Dline_Conv_opt.out) (./problem30._3Dline_Conv_opt.out)
+(./problem30._3Dline_grad_desc.out) (./problem30._3Dline_grad_desc.out)
 \@outlinefile=\write3
-\openout3 = `problem30._3Dline_Conv_opt.out'.
+\openout3 = `problem30._3Dline_grad_desc.out'.
 
 LaTeX Info: Redefining \celsius on input line 39.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 39.
@@ -460,34 +460,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: No \author given.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<figs/problem30.pdf, id=48, 462.52798pt x 346.89601pt>
+<figs/problem30.pdf, id=46, 462.52798pt x 346.89601pt>
 File: figs/problem30.pdf Graphic file (type pdf)
 <use figs/problem30.pdf>
-Package pdftex.def Info: figs/problem30.pdf  used on input line 109.
+Package pdftex.def Info: figs/problem30.pdf  used on input line 116.
 (pdftex.def)             Requested size: 390.0pt x 292.51282pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
 [2] [3 <./figs/problem30.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
- (./problem30._3Dline_Conv_opt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
-Package rerunfilecheck Info: File `problem30._3Dline_Conv_opt.out' has not chan
-ged.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
+ (./problem30._3Dline_grad_desc.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package rerunfilecheck Info: File `problem30._3Dline_grad_desc.out' has not cha
+nged.
 (rerunfilecheck)             Checksum: ABA73A2F3588D8771D73A1FD4DF78782;53.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 9634 strings out of 481239
- 144142 string characters out of 5920376
- 422020 words of memory out of 5000000
- 24703 multiletter control sequences out of 15000+600000
+ 9639 strings out of 481239
+ 144194 string characters out of 5920376
+ 422069 words of memory out of 5000000
+ 24704 multiletter control sequences out of 15000+600000
  546324 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,42p,272b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,42p,273b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
@@ -500,10 +500,10 @@ public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb>
-Output written on problem30._3Dline_Conv_opt.pdf (3 pages, 120218 bytes).
+Output written on problem30._3Dline_grad_desc.pdf (3 pages, 121696 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 30 named destinations out of 1000 (max. 500000)
  14 words of extra memory for PDF output out of 10000 (max. 10000000)
 

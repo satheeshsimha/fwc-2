@@ -39,7 +39,7 @@
 \begin{document}
 
 \begin{center}
-\title{\textbf{3D Lines}}
+\title{\textbf{3D Lines - Gradient Descent Method}}
 \date{\vspace{-5ex}} %Not to print date automatically
 \maketitle
 \end{center}
@@ -90,13 +90,20 @@ Substituting \eqref{eq:Eq1} in \eqref{eq:Eq2}
 	\label{eq:Eq4} 
 	&= \bm{\lambda}^\top\vec{M}^\top\vec{M}\bm{\lambda}+2\vec{k}^\top\vec{M}\bm{\lambda}+ \norm{\vec{k}}^2 
 \end{align}
-Equation \eqref{eq:Eq4} is a quadratric vector equation. To check whether it is convex or not, we will compute the value of $\vec{M}^\top\vec{M}$.
-\begin{align}
-	&\vec{M}^\top\vec{M} =  \myvec{2&3&1\\5&1&0}\myvec{2&5\\3&1\\1&0} = \myvec{14&13\\13&26}
-\end{align}
-The eigen values of $\vec{M}^\top\vec{M}$ are $34.73$ and $5.27$, which are greater than 0. Therefore $\vec{M}^\top\vec{M}$ is a positive definite matrix implying \eqref{eq:Eq4} is convex. 
+Equation \eqref{eq:Eq4} is a quadratric vector equation and it is already proved that the function is convex. 
 
-Setting parameters of equation \eqref{eq:Eq2} in cvxpy and solving, yields
+We will use Gradient Descent method to find the optimum value. Define
+\begin{align}
+	\label{eq:grad_des}
+	\bm{\lambda}_{n+1} = \bm{\lambda}_n - \alpha \nabla f\brak{\vec{\bm{\lambda}}_n}
+\end{align}
+Choosing
+\begin{enumerate}
+\item $\alpha$ = 0.001
+\item precision = 0.0000001
+\item n = 10000
+\item $\bm{\lambda}_0$ = $\myvec{5 \\ 5}$ 
+\end{enumerate}
 \begin{align}
 	\bm{\lambda}_{min} &= \myvec{-1.4\\ 0.969} \\
 	\vec{A} &= \myvec{3.8\\3.2\\ 1.4}\\
