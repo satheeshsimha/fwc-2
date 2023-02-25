@@ -1,4 +1,4 @@
-#Gradient Descent
+#Least Squares using SVD
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -24,9 +24,7 @@ ax1 = x1.reshape(3,-1)
 x2 = np.array([-1,2,2])
 ax2 = x2.reshape(3,-1)
 m1 = np.array([2,3,1])
-am1 = m1.reshape(3,-1)
 m2 = np.array([5,1,0])
-am2 = m2.reshape(3,-1)
 
 k = ax2-ax1
 
